@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+p {
+  font-weight: bold;
+}
+
 li {
   list-style-type: none;
 }
@@ -11,18 +15,77 @@ li {
 .container {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 6fr;
   height: 100vh;
 }
 
 header {
-  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1em 3em 1em 3em;
+  background-color: white;
 }
 
-.placeholder {
+header .top,
+header .bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-container,
+.profile-options,
+.profile-welcome,
+.button-options {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.profile-options {
+  padding: 0 1em 0 0;
+}
+
+input {
+  padding: 0.4em 0 0.4em 0.5em;
+  width: 45em;
+  border: none;
+  border-radius: 20px;
+  background-color: #e2e8f0;
+}
+
+input:focus {
+  outline: 1px solid rgb(0, 0, 0, .175);
+}
+
+.icon {
   height: 20px;
   width: 20px;
-  background-color: white
+  border-radius: 10px;
+  background-color: white;
+}
+
+.avatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 10px;
+  background-color: lightyellow;
+}
+
+.profile-welcome .avatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 20px;
+}
+
+button {
+  padding: 0.75em 2em 0.75em 2em;
+  border: none;
+  border-radius: 1.5em;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  background-color: #1992d4 ;
 }
 
 .title-logo,
@@ -47,9 +110,9 @@ header {
   gap: 2em;
   padding: 1em;
   color: white;
-  background-color: lightskyblue;
+  background-color: #1992d4;
 }
 
 main {
-  background-color: gainsboro;
+  background-color: #e2e8f0;
 }
