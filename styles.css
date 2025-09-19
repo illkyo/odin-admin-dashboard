@@ -14,8 +14,8 @@ li {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 6fr;
+  grid-template-columns: minmax(250px, 1fr) 4fr;
+  grid-template-rows: minmax(150px, 1fr) 1fr;
   height: 100vh;
 }
 
@@ -23,7 +23,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1em 3em 1em 3em;
+  padding: 1em 2em 1em 2em;
   background-color: white;
 }
 
@@ -95,7 +95,6 @@ button {
   gap: 1em;
 }
 
-
 .sidebar ul {
   display: flex;
   flex-direction: column;
@@ -114,5 +113,54 @@ button {
 }
 
 main {
+  display: grid;
+  padding: 1em;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 5em;
+  row-gap: 2.5em;
+  box-shadow: inset -1px 1px 5px rgb(0, 0, 0, .175);
   background-color: #e2e8f0;
+}
+
+.projects {
+  grid-column: 1 / span 1;
+  grid-row: 1 / -1;
+
+}
+
+.announcements {
+  grid-column: 2 / -1;
+  grid-row: 1 / span 1;
+
+}
+
+.trending {
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+
+}
+
+.project-cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+.project-card {
+  width: 380px;
+  height: 235px;
+  border: 1px solid red;
+}
+
+.announcements-box {
+  width: 275px;
+  height: 350px;
+  border: 1px solid red;
+}
+
+.trending-box {
+  width: 275px;
+  height: 350px;
+  border: 1px solid red;
 }
